@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDy-D8-GoM">
+                                <rect key="frame" x="54" y="102" width="171" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.72068672964867631" blue="0.22063677185194408" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="downFile"/>
+                                <connections>
+                                    <action selector="downFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hg-uz-fif"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-fF-mkB">
+                                <rect key="frame" x="54" y="168" width="171" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.72068672960000002" blue="0.2206367719" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="自动消失"/>
+                                <connections>
+                                    <action selector="autoDisappearPrompt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8C4-jo-jkD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2So-gW-GO9">
+                                <rect key="frame" x="54" y="231" width="171" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.72068672960000002" blue="0.2206367719" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="带自定义图提示"/>
+                                <connections>
+                                    <action selector="textAndPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Her-dw-ji0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ni-sE-Cua">
+                                <rect key="frame" x="54" y="294" width="171" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.72068672960000002" blue="0.2206367719" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="纯文字X秒后自动消失"/>
+                                <connections>
+                                    <action selector="onlyTextAutoDidappear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmq-UJ-15c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOK-qG-IsR">
+                                <rect key="frame" x="54" y="359" width="171" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.72068672960000002" blue="0.2206367719" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="默认图,X秒后自动消失"/>
+                                <connections>
+                                    <action selector="defaultPictureAndText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uHb-PO-RuT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95c-SU-R07">
+                                <rect key="frame" x="54" y="424" width="171" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.72068672960000002" blue="0.2206367719" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="纯文字,不自动消失"/>
+                                <connections>
+                                    <action selector="onlyText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjX-R8-gSD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="418.5"/>
+        </scene>
+    </scenes>
+</document>
