@@ -23,6 +23,10 @@ typedef enum : NSInteger{
 @property (nonatomic, assign) NetworkStatus netStatus;
 @property (nonatomic, strong) NSOutputStream *outputStream;
 
+/**取消所有网络请求*/
++ (void)cancelAllOperations;
+
+
 /**
  *  建立网络请求单例
  */
@@ -51,7 +55,7 @@ typedef enum : NSInteger{
  *  @param success    成功执行，block的参数为服务器返回的内容
  *  @param failure    执行失败，block的参数为错误信息
  */
-- (void)Post:(NSString *)url
+- (void)POST:(NSString *)url
   Parameters:(NSDictionary *)parameters
      Success:(void(^)(id responseObject))success
      Failure:(void(^)(NSError *error))failure;
@@ -68,7 +72,7 @@ typedef enum : NSInteger{
  *  @param success   成功执行，block的参数为服务器返回的内容
  *  @param failure   执行失败，block的参数为错误信息
  */
-- (void)Post:(NSString *)url
+- (void)POST:(NSString *)url
    Parameter:(NSDictionary *)parameter
         Data:(NSData *)fileData
    FieldName:(NSString *)fieldName
@@ -92,7 +96,7 @@ typedef enum : NSInteger{
                          Parameter:(NSDictionary *)patameter
                          SavedPath:(NSString *)savedPath
                           Complete:(void (^)(NSData *data, NSError *error))complete
-                          Progress:(void (^)(id downloadProgress, double progressValue))progress;
+                          Progress:(void (^)(id downloadProgress, double currentValue))progress;
 
 
 /**
@@ -125,7 +129,7 @@ typedef enum : NSInteger{
 /**
  *   监听网络状态的变化
  */
-- (NetworkStatus)checkingNetwork;
++ (void)checkingNetworkResult:(void(^)(NetworkStatus status))result;
 
 
 @end

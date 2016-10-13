@@ -40,8 +40,8 @@
         }else{
             [MBProgressHUD showSuccess:@"下载完成" ToView:self.view];
         }
-    } Progress:^(id downloadProgress, double progressValue) {
-        hud.progress = progressValue;
+    } Progress:^(id downloadProgress, double currentValue) {
+        hud.progress = currentValue;
 //        NSLog(@"progressValue: %0.f",progressValue);
     }];
 }
